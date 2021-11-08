@@ -6,6 +6,8 @@ node_modules/
 
 .node_modules
 
+**/node_modules
+
 .DS_Store
 
 # Xcode
@@ -64,3 +66,6 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+# dependencies 
+node_modules

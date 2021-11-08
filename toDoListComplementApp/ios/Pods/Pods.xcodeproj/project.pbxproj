@@ -12982,7 +12982,7 @@
 			buildConfigurationList = F44546AFBF04DA838144A58F6B7F5521 /* Build configuration list for PBXNativeTarget "FBReactNativeSpec" */;
 			buildPhases = (
 				926C48740EFAA669779304FEF69129C6 /* Headers */,
-				921B93EDF49D50DBCDB5433A90BABBAF /* [CP-User] Generate Specs */,
+				C5BA9F3CDC373170FF26772F4D6DEE75 /* [CP-User] Generate Specs */,
 				6B77D2A6184FEC9B8A68270923FA0163 /* Sources */,
 				FE1A577268B452C178A8E490B25BB54A /* Frameworks */,
 			);
@@ -13352,24 +13352,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Flipper-DoubleConversion/Flipper-DoubleConversion-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		921B93EDF49D50DBCDB5433A90BABBAF /* [CP-User] Generate Specs */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"/Users/carolaineviana/Documents/rocketseat/ignite-template/node_modules/react-native/scripts/../Libraries",
-			);
-			name = "[CP-User] Generate Specs";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/codegen-FBReactNativeSpec.log",
-				"/Users/carolaineviana/Documents/rocketseat/ignite-template/node_modules/react-native/scripts/../React/FBReactNativeSpec/FBReactNativeSpec/FBReactNativeSpec.h",
-				"/Users/carolaineviana/Documents/rocketseat/ignite-template/node_modules/react-native/scripts/../React/FBReactNativeSpec/FBReactNativeSpec/FBReactNativeSpec-generated.mm",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -o pipefail\n\nbash -l -c 'SRCS_DIR=/Users/carolaineviana/Documents/rocketseat/ignite-template/node_modules/react-native/scripts/../Libraries CODEGEN_MODULES_OUTPUT_DIR=/Users/carolaineviana/Documents/rocketseat/ignite-template/node_modules/react-native/scripts/../React/FBReactNativeSpec/FBReactNativeSpec CODEGEN_MODULES_LIBRARY_NAME=FBReactNativeSpec /Users/carolaineviana/Documents/rocketseat/ignite-template/node_modules/react-native/scripts/generate-specs.sh' 2>&1 | tee \"${SCRIPT_OUTPUT_FILE_0}\"";
-		};
 		B0A6FF1FF451E9FF3DB66EB18E838393 /* Copy generated compatibility header */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -13393,6 +13375,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/YogaKit/YogaKit.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/YogaKit/YogaKit-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+		C5BA9F3CDC373170FF26772F4D6DEE75 /* [CP-User] Generate Specs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"/Users/carolaineviana/Documents/rocketseat-projetos/toDoListComplementApp/node_modules/react-native/scripts/../Libraries",
+			);
+			name = "[CP-User] Generate Specs";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/codegen-FBReactNativeSpec.log",
+				"/Users/carolaineviana/Documents/rocketseat-projetos/toDoListComplementApp/node_modules/react-native/scripts/../React/FBReactNativeSpec/FBReactNativeSpec/FBReactNativeSpec.h",
+				"/Users/carolaineviana/Documents/rocketseat-projetos/toDoListComplementApp/node_modules/react-native/scripts/../React/FBReactNativeSpec/FBReactNativeSpec/FBReactNativeSpec-generated.mm",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -o pipefail\n\nbash -l -c 'SRCS_DIR=/Users/carolaineviana/Documents/rocketseat-projetos/toDoListComplementApp/node_modules/react-native/scripts/../Libraries CODEGEN_MODULES_OUTPUT_DIR=/Users/carolaineviana/Documents/rocketseat-projetos/toDoListComplementApp/node_modules/react-native/scripts/../React/FBReactNativeSpec/FBReactNativeSpec CODEGEN_MODULES_LIBRARY_NAME=FBReactNativeSpec /Users/carolaineviana/Documents/rocketseat-projetos/toDoListComplementApp/node_modules/react-native/scripts/generate-specs.sh' 2>&1 | tee \"${SCRIPT_OUTPUT_FILE_0}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 

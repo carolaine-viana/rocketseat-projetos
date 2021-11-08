@@ -1,0 +1,15 @@
+{
+	"Componente Funcional": { //nome do componente
+		"scope": "javascript,typescript, typescriptreact",
+		"prefix": "styles", //comando pra chamar ele no vs
+		"body": [
+			"import styled from 'styled-components/native'",
+			"$2",
+
+			"export const Container = styled.View` ",
+			"    `;",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+}

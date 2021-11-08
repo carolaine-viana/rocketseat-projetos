@@ -1,0 +1,24 @@
+{
+	"Componente Funcional": { //nome do componente
+		"scope": "javascript,typescript, typescriptreact",
+		"prefix": "comp", //comando pra chamar ele no vs
+		"body": [
+			"import React from 'react' ",
+			"import {View, Text} from 'react-native' ",
+			"import {      ",
+			"   Container, ",
+			"} from './styles' ",
+			"$2",
+
+			"export function xxx(){ ",
+			"     return(",
+			"        <View>",
+			"           <Text>oi</Text>",
+			"         </View>",
+			"       )",
+			"} ",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+}

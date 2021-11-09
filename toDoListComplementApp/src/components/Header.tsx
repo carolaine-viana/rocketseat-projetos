@@ -1,5 +1,5 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Image, Button, TouchableOpacity } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
 import logoImg from '../assets/images/logo/logo.png';
@@ -20,6 +20,7 @@ export function Header({ tasksCounter }: HeaderProps) {
         <Text style={styles.tasksCounter}>Você tem</Text>
         <Text style={styles.tasksCounterBold}> {tasksCounter} {tasksCounterText}</Text>
       </View>
+
     </View>
   )
 }

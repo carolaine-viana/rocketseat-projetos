@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Alert} from 'react-native';
+import { StyleSheet, View, Alert, useColorScheme} from 'react-native';
 
 import { Header } from '../components/Header';
 import { ItemWrapper } from '../components/ItemWrapper';
@@ -18,6 +18,8 @@ export type EditTaskArgs = {
 }
 export function Home() {
   const [tasks, setTasks] = useState<TaskData[]>([]);
+  const isDarkMode = useColorScheme() === 'dark';
+
 
   function handleAddTask(newTaskTitle: string) {
     const data = {
@@ -82,10 +84,9 @@ export function Home() {
          
   };
 
- 
 
   return (
-    <View style={styles.container}>
+    <View style={isDarkMode ? styles.containerDark : styles.container}>
       <Header tasksCounter={tasks.length} />
 
       <TodoInput
@@ -107,5 +108,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#EBEBEB'
+  },
+  containerDark: {
+    flex: 1,
+    backgroundColor: '#000'
   }
 })

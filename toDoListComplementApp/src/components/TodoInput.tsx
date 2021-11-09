@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View} from 'react-native';
+import { StyleSheet, Text, TextInput, TouchableOpacity, useColorScheme, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
+import {stylesDark} from './dark';
 
 interface TodoInputProps {
   addTask: (task: string) => void;
@@ -9,6 +10,7 @@ interface TodoInputProps {
 
 export function TodoInput({ addTask  }: TodoInputProps) {
     const [task, setTask] = useState('');
+    const isDarkMode = useColorScheme() === 'dark';
 
   function handleAddNewTask() {
       if(!task)
@@ -18,9 +20,10 @@ export function TodoInput({ addTask  }: TodoInputProps) {
   }
 
   return (
-    <View style={styles.inputContainer}>
+    <View style={[isDarkMode ? stylesDark.inputContainer : stylesDark.inputContainer]}>
       <TextInput 
-        style={styles.input} 
+        style={[isDarkMode ? stylesDark.input : stylesDark.input]}
+        //style={styles.input}
         placeholder="Adicionar novo todo..."
         placeholderTextColor="#B2B2B2"
         returnKeyType="send"

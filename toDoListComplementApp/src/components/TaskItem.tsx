@@ -84,7 +84,7 @@ export function TaskItem({
                     onChangeText={setSaveValue}
                     editable={isEditing}
                     onSubmitEditing={handleSubmitEditing}
-                    style={task.done ? styles.taskTextDone : styles.taskText}
+                    style={[task.done ? styles.taskTextDone : styles.taskText]}
                   />
               </TouchableOpacity>
             </View>
@@ -160,6 +160,12 @@ const styles = StyleSheet.create({
   taskText: {
     color: "#666",
     fontFamily: "Inter-Medium",
+    fontSize: 20,
+  },
+  taskTextDark: {
+    color: "#FFF",
+    fontFamily: "Inter-Medium",
+    fontSize: 20,
   },
   taskMarkerDone: {
     height: 16,

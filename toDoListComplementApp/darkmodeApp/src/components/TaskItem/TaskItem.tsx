@@ -9,12 +9,12 @@ import {
   TextInput,
 } from "react-native";
 
-import { Task } from "./TasksList";
+import { Task } from "../TasksList";
 
 import Icon from "react-native-vector-icons/Feather";
-import editIcon from "../assets/icons/edit/edit.png";
-import trashIcon from "../assets/icons/trash/trash.png";
-import { EditTaskArgs } from "../pages/Home";
+import editIcon from "../../assets/icons/edit/edit.png";
+import trashIcon from "../../assets/icons/trash/trash.png";
+import { EditTaskArgs } from "../../pages/Home/Home";
 
 interface TaskItemProps {
   task: Task;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { FlatList} from 'react-native';
 import { ItemWrapper } from './ItemWrapper';
-import { TaskItem } from './TaskItem';
-import { EditTaskArgs } from '../pages/Home';
+import { TaskItem } from './TaskItem/TaskItem';
+import { EditTaskArgs } from '../pages/Home/Home';
 
 export interface Task {
   id: number;

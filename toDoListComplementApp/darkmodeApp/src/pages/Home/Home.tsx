@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Alert, useColorScheme} from 'react-native';
+import {      
+  Container,
+} from './styles';
 
-import { Header } from '../components/Header';
-import { ItemWrapper } from '../components/ItemWrapper';
-import { Task, TasksList } from '../components/TasksList';
-import { TodoInput } from '../components/TodoInput';
+import { Alert, useColorScheme} from 'react-native';
+
+import { Header } from '../../components/Header/Header';
+import { TasksList } from '../../components/TasksList';
+import { TodoInput } from '../../components/TodoInput/TodoInput';
 
 export interface TaskData {
   id: number;
@@ -86,7 +89,7 @@ export function Home() {
 
 
   return (
-    <View style={isDarkMode ? styles.containerDark : styles.container}>
+    <Container>
       <Header tasksCounter={tasks.length} />
 
       <TodoInput
@@ -100,17 +103,7 @@ export function Home() {
         removeTask={handleRemoveTask}
         editTask={handleEditTask}
       />
-    </View>
+    </Container>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#EBEBEB'
-  },
-  containerDark: {
-    flex: 1,
-    backgroundColor: '#000'
-  }
-})

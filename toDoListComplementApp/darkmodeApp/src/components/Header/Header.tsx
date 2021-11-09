@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet, Image, Button, TouchableOpacity } from 'react-native';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
-import logoImg from '../assets/images/logo/logo.png';
+import logoImg from '../../assets/images/logo/logo.png';
 
 interface HeaderProps {
   tasksCounter: number;

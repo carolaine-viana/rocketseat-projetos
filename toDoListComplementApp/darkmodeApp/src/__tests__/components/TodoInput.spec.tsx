@@ -1,5 +1,5 @@
 import React from 'react';
-import { TodoInput } from '../../components/TodoInput';
+import { TodoInput } from '../../components/TodoInput/TodoInput';
 import { fireEvent, render } from '@testing-library/react-native';
 
 let mockedAddTask: jest.Mock;
